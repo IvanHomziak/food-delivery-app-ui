@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+:root {
+    --primary-color: #b12020; /* Rich red */
+    --secondary-color: #ff9100; /* Warm yellow to complement primary */
+    --hover-color: #921818; /* Darker red for hover effects */
+    --text-color-light: #ffffff; /* Contrast against dark backgrounds */
+    --text-color-dark: #4d4d4d; /* Slightly lighter than pure black for readability */
+    --background-color: #fef7f7; /* Subtle light pinkish tone to echo primary */
+    --border-radius: 5px; /* Keeps the consistent styling */
+  }
+  
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-dark);
+  }
+  
+  /* Header */
+  .header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .user-avatar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-light);
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color-light);
+  }
+  
+  /* Restaurant Grid */
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .restaurant-card {
+    background-color: var(--text-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .restaurant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .restaurant-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .restaurant-details {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .restaurant-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color-dark);
+  }
+  
+  .restaurant-rating {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+  }
+  
+  .star {
+    color: orange; /* Bright orange color for the star */
+    margin-left: 5px; /* Space between the text and the star */
+    font-size: 1rem; /* Adjust the size to match the text */
+    vertical-align: middle; /* Align with the text baseline */
+  }
+  
+  
+  .order-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .restaurant-details {
+      padding: 15px;
+    }
+  
+    .restaurant-grid {
+      padding: 20px 10px;
+    }
+  }
+  

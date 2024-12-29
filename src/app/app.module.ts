@@ -7,6 +7,7 @@ import { HeaderModule } from './header/header.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { RestaurantListingModule } from './restaurant-listing/restaurant-listing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     HeaderModule,
     HttpClientModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    RestaurantListingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
