@@ -143,5 +143,251 @@
     .restaurant-grid {
       padding: 20px 10px;
     }
+
+    /* Root variables for consistent theme */
+:root {
+    --primary-color: #b12020;
+    --secondary-color: #d6da12;
+    --hover-color: #0093c6;
+    --background-color: #f9f9f9;
+    --text-color-dark: #333333;
+    --text-color-light: #ffffff;
+    --border-radius: 5px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Food list container */
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+  }
+  
+  /* Food item card */
+  .food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    background-color: var(--text-color-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .food-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
+  }
+  
+  /* Food details */
+  .food-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .food-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .food-description {
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    margin: 5px 0;
+  }
+  
+  .food-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  /* Quantity controls */
+  .food-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color-dark);
+  }
+  
+  /* Buttons */
+  .quantity-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .quantity-button:active {
+    transform: scale(0.95);
+  }
+  
+  .quantity-button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .minus-button {
+    background-color: #d9534f;
+  }
+  
+  .minus-button:hover {
+    background-color: #c9302c;
+  }
+  
+  .food-quantity {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the value for desired spacing */
+  }
+  
+
+  :root {
+    --primary-color: #b12020;
+    --secondary-color: #d6da12;
+    --hover-color: #0093c6;
+    --text-color-light: #ffffff;
+    --text-color-dark: #333333;
+    --background-color: #f9f9f9;
+    --border-radius: 5px;
+    --button-green: #28a745; /* Green color for buttons */
+    --hover-green: #218838; /* Hover state */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+  }
+  
+  .restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .restaurant-name {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .checkout-button {
+    background-color: var(--button-green);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-button:hover {
+    background-color: var(--hover-green);
+  }
+  
+  .restaurant-description {
+    margin: 20px 0;
+    font-size: 1rem;
+  }
+  
+  .food-menu-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-color-light);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .food-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+  
+  .food-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .food-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+  }
+  
+  .food-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .quantity-label {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
   }
   

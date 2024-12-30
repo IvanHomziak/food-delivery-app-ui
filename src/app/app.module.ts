@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { RestaurantListingModule } from './restaurant-listing/restaurant-listing.module';
+import { FoodCatalogueModule } from './food-catalogue/food-catalogue.module';
+import { OrderSummaryModule } from './order-summary/order-summary.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RestaurantListingModule } from './restaurant-listing/restaurant-listing
     HttpClientModule,
     CommonModule,
     RouterModule,
-    RestaurantListingModule
+    RestaurantListingModule,
+    FoodCatalogueModule,
+    OrderSummaryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

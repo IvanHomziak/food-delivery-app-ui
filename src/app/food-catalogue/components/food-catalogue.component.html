@@ -1,0 +1,32 @@
+<main class="main-content my-gap">
+    <div class="restaurant-header">
+      <h1 class="restaurant-name">{{ foodItemResponse.restaurant.name }}</h1>
+      <button class="checkout-button" (click)="onCheckOut()">
+        <i class="fas fa-shopping-cart"></i> Checkout
+      </button>
+      <p class="restaurant-description">{{ foodItemResponse.restaurant.restaurantDescription }}</p>
+      <h2 class="food-menu-title">Food Menu</h2>
+    </div>
+
+
+    <div class="restaurant-grid" *ngFor="let food of foodItemResponse.foodItemsList">
+      <div class="restaurant-card">
+        <!-- <div class="restaurant-image">
+          <img [src]="'assets/restaurant-img/' + getRandomImage()" alt="{{ food.itemName }}">
+        </div> -->
+        <div class="restaurant-details">
+          <h3 class="restaurant-name">{{ food.itemName }}</h3>
+          <p class="restaurant-description">{{ food.itemDescription }}</p>
+          <div class="restaurant-price">USD: {{ food.price }}</div>
+          <div class="food-quantity">
+            <p class="restaurant-description">Available portions: {{ food.quantity }}</p>
+            <button class="quantity-button minus-button" *ngIf="food.quantity > 0" (click)="decrement(food)">-</button>
+            <span class="quantity-label">{{ orderedQuentity }}</span>
+            <button class="quantity-button plus-button" (click)="increment(food)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  
